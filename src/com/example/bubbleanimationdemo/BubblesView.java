@@ -20,7 +20,7 @@ public class BubblesView extends SurfaceView implements SurfaceHolder.Callback {
 	public BubblesView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		getHolder().addCallback(this);
-		bgPaint.setColor(Color.RED);
+		bgPaint.setColor(Color.WHITE);
 	}
 
 	@Override
@@ -93,7 +93,7 @@ public class BubblesView extends SurfaceView implements SurfaceHolder.Callback {
 		if (Math.random()>mAddBubbleFrequency) {
 			return;
 		}
-		mBubbles.add(new Bubble((float)(width*Math.random()), (float)(height*Math.random()), (float)(Bubble.MAX_SPEED*Math.random())));
+		mBubbles.add(new Bubble((float)(width*Math.random()), (float)(height*Math.random()*2), (float)(Bubble.MAX_SPEED*Math.random())));
 	}
 	
 	private class GameLoop extends Thread{
