@@ -3,6 +3,8 @@ package com.example.bubbleanimationdemo;
 import java.util.LinkedList;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -97,7 +99,6 @@ public class BubblesView extends SurfaceView implements SurfaceHolder.Callback {
 	}
 	
 	private class GameLoop extends Thread{
-		
 		private long mPerFrame = 1000/25;
 		public boolean running = true;
 		long mFrameTime = 0;
